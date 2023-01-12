@@ -21,6 +21,10 @@ class Game:
         self.points = Points([
             Point((683, 383), mass=2 * 10 ** 20,  color=pygame.Color("yellow"), speed=np.array([0, 0])),
             Point((983, 383), mass=0.2, r=10, speed=np.array([0, 10]), show_path=True)]) # Попробуй заменить show_path на show_particle и посмотри что изменилось
+        # Тоже интересный вариант
+        # self.points = Points([
+        #     Point((683, 383), mass=2 * 10 ** 20, r=10, color=pygame.Color("yellow"), speed=np.array([0, -10]), show_path=True),
+        #     Point((983, 383), mass=2 * 10 ** 20, r=10, speed=np.array([0, 10]), show_path=True)]) 
         self.particles = []
 
         self.pause_menu = Button(self.width // 2, self.height // 2, 2, 2, "Play", padding=6, on_click=self.pause_switch)
